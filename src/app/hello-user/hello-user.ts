@@ -8,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class HelloUser {
 
+  nom: string ='Utilisateur';
+  compteurClics: number =0;
+
+  incrementer(){
+    this.compteurClics++;
+  }
+
+  resetCompteur(){
+    this.compteurClics= 0;
+  }
+
 }
