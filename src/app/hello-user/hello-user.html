@@ -1,1 +1,35 @@
 <p>hello-user works!</p>
+
+<div class="hello-user-container">
+    <h2>Composant Hello User</h2>
+    
+    <div class="input-section">
+
+      <label for="nom">Votre nom :</label>
+      <input 
+        id="nom"
+        type="text" 
+        [(ngModel)]="nom" 
+        placeholder="Entrez votre nom"
+        class="input-nom">
+
+    </div>
+  
+    <div class="display-section">
+
+      <h3>Bonjour {{ nom }} ! </h3>
+      <p>Nombre de clics : {{ compteurClics }}</p>
+
+    </div>
+  
+    <div class="buttons-section">
+
+      <button (click)="incrementer()" class="btn btn-primary">
+        Cliquer ici ! 
+      </button>
+
+      <button (click)="resetCompteur()" class="btn btn-secondary">
+        Reset compteur 
+      </button>
+    </div>
+</div>
